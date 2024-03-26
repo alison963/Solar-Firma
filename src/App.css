@@ -1,41 +1,8 @@
-.App {
-  text-align: center;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .Cover {
   position: relative;
-  height: 320px;
+  height: 400px;
   overflow: hidden; /*to not extend outside his bounds */
+  width: 100%;
 }
 
 .Cover::before { /*create a layer for the background and add background image to it  */
@@ -54,10 +21,59 @@
 }
 
 .TextCover {
-  position: absolute;
-  bottom: 40%;
-  left: 15%;
   color: white;
-  z-index: 2; /* Ensure text appears above the pseudo-element */
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
+p.Text1 {
+  font-family: "Rakkas", serif;
+  font-size: 60px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 1;
+
+}
+p.Text2 {
+  font-family: "Rakkas", serif;
+  font-size: 60px;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  z-index: 1;
+  
+}
+
+.ContainerService {
+  background-color: #0d9488;
+}
+
+.ServiceCards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  height: 60vh;
+  
+}
+.items {
+  max-width: 450px;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 1;
+}
+.img-items {
+  flex-shrink: 0;
+}
+@media (max-width: 1500px) {
+  .ServiceCards {
+    flex-direction: column;
+    justify-content: flex-start; 
+    height: auto;
+  }
+  .items {
+    flex-basis: 20vh;
+    flex-shrink: 1;
+  }
+}
+
+

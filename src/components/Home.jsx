@@ -4,8 +4,8 @@ function Home() {
     return (
         <div className="Cover">
             <div className="TextCover">
-                <p className="font-extrabold text-3xl ">Solar Service </p>
-                <p className="font-extrabold text-3xl brightness-100"> In bester Qualität</p>
+                <p className="Text1">Solar Service </p>
+                <p className="Text2"> In bester Qualität</p>
             </div>
         </div>
     )
