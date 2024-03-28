@@ -27,7 +27,7 @@ function Kontakt() {
           name="subject"
           placeholder="Verfasse eine Nachricht"
         ></textarea>
-        <button className="Submit text-2xl p-4 mb-3 bg-teal-500 rounded-lg ">
+        <button className="Submit text-2xl p-4 mb-3 rounded-lg ">
           Senden
         </button>
       </div>

@@ -61,6 +61,7 @@ p.Text2 {
   padding: 20px;
   flex-shrink: 1;
 }
+
 .img-items {
   flex-shrink: 0;
 }
@@ -103,9 +104,23 @@ p.Text2 {
   color: black;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  
 }
 label {
   text-align: left;
+}
+/*.ContainerService {
+  background-color: #00f5c879;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 5%;
+}*/
+
+button {
+  background-color: #00f5c879;
+  border-radius: 20px;
+}
+button:hover {
+  background-color: #00f5c8f0;
+ 
 }
