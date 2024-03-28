@@ -122,5 +122,11 @@ button {
 }
 button:hover {
   background-color: #00f5c8f0;
- 
+}
+.button {
+  background-color: #00f5c879;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: #00f5c8f0;
 }

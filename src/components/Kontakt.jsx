@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
 
-function Kontakt() {
+export const Kontakt = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_ffghgbc', 'template_hnn70oo', form.current, {
+        publicKey: 'ObVjI5rBgon6IHCRA',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
+
   return (
     <div className="ContainerForm">
       <Navbar />
@@ -12,28 +32,34 @@ function Kontakt() {
         _______________________
       </h1>
       <h1 className=" text-2xl text-center">Kontakt</h1>
-      <div className="form">
-        <input className="eingabe" placeholder="Name"></input>
+      <form ref={form} onSubmit={sendEmail} className="form">
+        <input
+          placeholder="Name"
+          type="text"
+          name="from_name"
+          className="eingabe"
+        />
 
-        <input className="eingabe" placeholder="Nachname"></input>
-
-        <input className="eingabe" placeholder="Telefon"></input>
-
-        <input className="eingabe" placeholder="PLZ"></input>
+        <input
+          placeholder="Email"
+          type="email"
+          name="from_email"
+          className="eingabe"
+        />
 
         <textarea
+          placeholder="Nachricht"
+          name="message"
           className="eingabe"
-          id="subject"
-          name="subject"
-          placeholder="Verfasse eine Nachricht"
-        ></textarea>
-        <button className="Submit text-2xl p-4 mb-3 rounded-lg ">
-          Senden
-        </button>
-      </div>
+        />
+        <input
+          type="submit"
+          value="Send"
+          className="eingabe button text-2xl p-4 mb-3 rounded-lg "
+        />
+      </form>
       <Footer />
     </div>
   );
-}
-
+};
 export default Kontakt;
