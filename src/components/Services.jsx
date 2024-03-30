@@ -4,13 +4,12 @@ import ServiceCard from './ServiceCard';
 function Services() {
   return (
     <div>
-      <h1 className=" text-2xl text-center">
-        _______________________
-      </h1>
-      <h1 className=" text-2xl text-center">
-        Unsere Dienstleistungen
-      </h1>
-      <div className="ServiceCards  ">
+      <div className='ueberschrift'>
+        <h1 className="text-3xl text-center">_______________________
+        </h1>
+        <h1 className=" text-4xl text-teal-700 text-center mb-10">Unsere Dienstleistungen</h1>
+      </div>
+      <div className="ServiceCards">
         <div className="items">
           <ServiceCard
             title="Technische Betriebsführung"

@@ -4,13 +4,14 @@ import ProjectCard from './ProjectCards';
 
 function Projects() {
   return (
-    <div className="ContainerService ">
-      <h1 className="text-2xl text-center">
-        _______________________
-      </h1>
-      <h1 className="text-2xl text-center">Unsere Projekte</h1>
+    <div className="ContainerService">
+      <div className='ueberschrift'>
+        <h1 className="text-3xl text-center">_______________________
+        </h1>
+        <h1 className=" text-4xl text-teal-700 text-center mb-10">Unsere Projekte</h1>
+      </div>
       <div className="ServiceCards">
-        <div className="items ">
+        <div className="items">
           <ProjectCard
             title="Gifhorn"
             text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"

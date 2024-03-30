@@ -1,6 +1,6 @@
 .Cover {
   position: relative;
-  height: 400px;
+  height: 50vh;
   overflow: hidden; /*to not extend outside his bounds */
   width: 100%;
 }
@@ -24,7 +24,6 @@
   color: white;
 }
 p.Text1 {
-  font-family: "Rakkas", serif;
   font-size: 60px;
   position: absolute;
   top: 20%;
@@ -33,7 +32,7 @@ p.Text1 {
 
 }
 p.Text2 {
-  font-family: "Rakkas", serif;
+  
   font-size: 60px;
   position: absolute;
   top: 40%;
@@ -44,6 +43,10 @@ p.Text2 {
 
 .color1 {
   background-color: #ffffff;
+  border-radius: 8%;
+}
+.colorGreen {
+  color: #00897B;
 }
 
 .ServiceCards {
@@ -52,13 +55,13 @@ p.Text2 {
   align-items: center;
   gap: 10px;
   justify-content: center;
-  height: 60vh;
-  
+  height: auto;
+  margin-bottom: 10%;
 }
 .items {
   max-width: 450px;
   text-align: center;
-  padding: 20px;
+  background-color: #00897B;
   flex-shrink: 1;
 }
 
@@ -82,8 +85,46 @@ p.Text2 {
   align-items: center;
   gap: 20px;
   justify-content: center;
-  height: 60vh;
-  
+  height: auto;
+}
+.formGrid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+.formItems {
+  flex-basis: 50%;
+  flex-shrink: 1;
+}
+.para {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 20px;
+  justify-content:center;
+  text-align: center;
+  padding: 10%;
+  height: auto;
+}
+@media (max-width: 1000px) {
+  .formGrid {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .form {
+    height: auto;
+  }
+  .para {
+    height: auto;
+    /*align-items: flex-start;
+    text-align: left;*/
+  }
+  .formItems {
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .form {
@@ -97,7 +138,8 @@ p.Text2 {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  width: 40%;
+  font-size: x-large;
+  width: 70%;
 }
 
 .Submit {
@@ -109,24 +151,17 @@ p.Text2 {
 label {
   text-align: left;
 }
-/*.ContainerService {
-  background-color: #00f5c879;
-  margin-left: 10%;
-  margin-right: 10%;
-  border-radius: 5%;
-}*/
 
-button {
-  background-color: #00f5c879;
-  border-radius: 20px;
-}
-button:hover {
-  background-color: #00f5c8f0;
-}
 .button {
-  background-color: #00f5c879;
+  background-color: #4DB6AC;
   border-radius: 20px;
 }
 .button:hover {
-  background-color: #00f5c8f0;
+  background-color: #00897B;
+}
+
+.ueberschrift {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  
 }

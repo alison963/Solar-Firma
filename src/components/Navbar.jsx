@@ -7,7 +7,7 @@ function Navbar() {
       <div>
         <Link
           to="/home"
-          className="font-serif text-center text-teal-600 text-4xl"
+          className="colorGreen font-serif text-center text-4xl"
         >
           SolarEnergie
         </Link>
@@ -15,7 +15,7 @@ function Navbar() {
       <div>
         <Link
           to="/contact"
-          className="font-serif text-center text-teal-600 text-4xl"
+          className="colorGreen font-serif text-center text-4xl"
         >
           Kontakt
         </Link>

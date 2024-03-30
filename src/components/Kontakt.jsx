@@ -25,39 +25,52 @@ export const Kontakt = () => {
   };
 
   return (
-    <div className="ContainerForm">
+    <div>
       <Navbar />
       <Home />
-      <h1 className=" text-2xl text-center">
+      <h1 className="text-2xl text-center">
         _______________________
       </h1>
-      <h1 className=" text-2xl text-center">Kontakt</h1>
-      <form ref={form} onSubmit={sendEmail} className="form">
-        <input
-          placeholder="Name"
+      <h1 className=" text-4xl text-center">Kontakt</h1>
+      <div className='formGrid '>
+        <div className='formItems para '>
+            <p className='text-3xl font-serif '>Öffnungszeiten:</p>
+            <p className="text-2xl font-serif ">
+            Montag - Freitag: 9:00 - 18:00 Uhr <br /> 
+            Samstag: 10:00 - 14:00 Uhr
+            </p>
+            <h1 className='text-2xl font-serif '>
+            Wir freuen uns über Ihr Interesse und stehen Ihnen gerne für Fragen,
+            Anregungen oder Feedback zur Verfügung.
+            Unser Team ist bemüht,  weiterzuhelfen.</h1>
+          </div>
+        <form ref={form} onSubmit={sendEmail} className="form formItems">
+          <input
+            placeholder="Name"
           type="text"
           name="from_name"
           className="eingabe"
-        />
+          />
 
-        <input
-          placeholder="Email"
+          <input
+            placeholder="Email"
           type="email"
           name="from_email"
           className="eingabe"
-        />
+          />
 
-        <textarea
-          placeholder="Nachricht"
+          <textarea
+            placeholder="Nachricht"
           name="message"
           className="eingabe"
-        />
-        <input
-          type="submit"
+          />
+          <input
+            type="submit"
           value="Send"
           className="eingabe button text-2xl p-4 mb-3 rounded-lg "
-        />
-      </form>
+          />
+        </form>
+      </div>
       <Footer />
     </div>
   );
